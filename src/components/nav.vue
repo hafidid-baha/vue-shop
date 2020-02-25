@@ -26,9 +26,8 @@
                                 <a class="nav-link" href="">Contact Us</a>
                             </li>
                             <li class="nav-item d-inline-block ml-auto">
-                                <a class="i-settings d-inline-block ml-2"><i class="fab fa-medium"></i></a>
-                                <a class="i-search d-inline-block ml-2"></a>
-                                <a class="i-market d-inline-block ml-4"></a>
+                                <a class="d-inline-block ml-2 text-center"><i class="fas fa-cog fa-lg"></i></a>
+                                <a class="d-inline-block ml-4 text-center"><i class="fas fa-shopping-cart fa-lg"></i></a>
                                 <div class="item-count pl-2 pr-2 d-inline-block">5</div>
                             </li>
                         </ul>
