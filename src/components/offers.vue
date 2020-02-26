@@ -2,36 +2,27 @@
     <!-- offers section start-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-3 p-3">
-                <div class="col-12 offer-item pt-4 pb-4">
-                    <span class="d-block font-italic">Popular Furniture</span>
-                    <b>BESTSELLER PRODUCTS</b>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3 p-3">
-                <div class="col-12 offer-item pt-4 pb-4">
-                    <span class="d-block font-italic">New Furniture</span>
-                    <b>NEW ARAIVALS PRODUCTS</b>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3 p-3">
-                <div class="col-12 offer-item pt-4 pb-4">
-                    <span class="d-block font-italic">Sale Furniture</span>
-                    <b>ON SALE PRODUCTS</b>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3 p-3">
-                <div class="col-12 offer-item pt-4 pb-4">
-                    <span class="d-block font-italic">Top Furniture</span>
-                    <b>TOP RATED PRODUCTS</b>
-                </div>
-            </div>
+            <OfferItem v-for="(item, index) in offerItems" :key="index" :offerArgs=item />
         </div>
     </div>
     <!-- offers section ends-->
 </template>
 <script>
+import OfferItem from './offerItem.vue'
 export default {
-    name:'Offers'
+    name:'Offers',
+    components:{
+        OfferItem
+    },
+    data(){
+        return{
+            offerItems:[
+                {title:'Popular Furniture',desc:'BESTSELLER PRODUCTS'},
+                {title:'New Furniture',desc:'NEW ARAIVALS PRODUCTS'},
+                {title:'Sale Furniture',desc:'ON SALE PRODUCTS'},
+                {title:'Top Furniture',desc:'TOP RATED PRODUCTS'},
+            ]
+        }
+    }
 }
 </script>
